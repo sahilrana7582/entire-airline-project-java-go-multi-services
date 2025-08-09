@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: airline_platform
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/airline_system
+    username: postgres
+    password: 1234
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: 3000
